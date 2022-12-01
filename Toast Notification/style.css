@@ -23,13 +23,13 @@ button {
     position: fixed;
 }
 
-ul {
+#container {
     position: fixed;
     bottom: 10px;
     right: 20px;
 }
 
-ul li {
+.toast {
     background-color: rebeccapurple;
     color: white;
     padding: 1rem;

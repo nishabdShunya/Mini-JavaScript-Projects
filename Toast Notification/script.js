@@ -1,12 +1,16 @@
 const btn = document.getElementById('btn');
-const notificationList = document.getElementById('notification-list');
+const container = document.getElementById('container');
 
 btn.addEventListener('click', () => {
-    const notificationItem = document.createElement('li');
-    notificationItem.innerHTML = 'Some Text';
-    notificationList.appendChild(notificationItem);
-    setTimeout(() => {
-        notificationList.removeChild(notificationItem);
-    }, 3000);
+    createNotification();
 });
 
+function createNotification() {
+    const notif = document.createElement('div');
+    notif.classList.add('toast');
+    notif.innerText = 'Some Text';
+    container.appendChild(notif);
+    setTimeout(() => {
+        notif.remove();
+    }, 3000);
+};
